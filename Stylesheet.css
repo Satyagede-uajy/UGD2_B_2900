@@ -1,0 +1,508 @@
+/* RESET: Bersihkan jarak bawaan browser */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* BACKGROUND 3 GARIS DIAGONAL */
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background: linear-gradient( 110deg, #ffffff 45%, #ffffff 45%, #000000 55%, #4a6741 55%);
+    position: relative;
+    overflow: hidden;
+    /* Biar konten tidak meluber keluar layar */
+}
+
+
+/* SISI KIRI */
+
+.sisi_kiri {
+    flex: 55%;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-box {
+    width: 62px;
+    background: #000000;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link :hover {
+    transform: scale(1.1);
+}
+
+.logo-box {
+    width: 45px;
+    background: #4a6741;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ikon_rumah {
+    width: 100%;
+    filter: invert(1);
+}
+
+.main-content {
+    margin-top: 100px;
+}
+
+.kata_sapa {
+    font-size: 20px;
+    color: #214616;
+    font-weight: 600;
+}
+
+
+/* FIX UKURAN NAMA: Pakai clamp biar ukuran otomatis mengecil di layar kecil */
+
+.nama {
+    font-size: clamp(32px, 4vw, 65px);
+    font-weight: 800;
+    line-height: 1;
+    color: #1a1a1a;
+    margin: 9px;
+}
+
+.role {
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 2px;
+}
+
+.social-item_ig img {
+    width: 35px;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.social-item_ig:hover img {
+    opacity: 111;
+    transform: translateY(-11px);
+}
+
+.social-item_gt img {
+    width: 35px;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.social-item_gt:hover img {
+    opacity: 111;
+    transform: translateY(-11px);
+}
+
+.social-item_lk img {
+    width: 35px;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.social-item_lk:hover img {
+    opacity: 111;
+    transform: translateY(-11px);
+}
+
+
+/* SISI KANAN */
+
+.sisi_kanan {
+    flex: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+.navigasi_bar {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    z-index: 100;
+}
+
+.navigasi_bar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3;
+}
+
+.navigasi_bar a:hover {
+    color: #adff2f
+}
+
+.contact-tombol {
+    background: #fff;
+    color: #4a6741 !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.efek-kaca {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    width: 85%;
+    height: auto;
+    max-width: 650px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.efek-kaca h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 800;
+    width: auto;
+    max-width: none;
+    padding: 0;
+}
+
+.efek-kaca p {
+    line-height: 1.8;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-tombol:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    padding-bottom: 50px;
+    z-index: 10;
+}
+
+.photo-wrapper {
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.foto {
+    width: 430px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 100px;
+    border: 12px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1px 5px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.skill-card img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+}
+
+.skill-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    letter-spacing: 0.05px;
+    text-transform: uppercase;
+}
+
+.scrollable-skills {
+    max-height: none;
+    overflow-y: hidden;
+    padding-right: 0;
+}
+
+.scrollable-skills::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scrollable-skills::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.portfolio-container {
+    width: 90%;
+    margin-top: 50px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+
+/* Scrollbar styling */
+
+.portfolio-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+
+/* Grid 2 kolom untuk Proyek */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #fff;
+    padding: 20px;
+}
+
+.project-info {
+    padding: 20px;
+    color: #fff;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #adff2f;
+}
+
+.project-info p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #fff;
+    color: #4a6741;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #adff2f;
+    color: #000;
+    transform: scale(1.02);
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-contact input,
+.form-contact textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+    border-bottom: 2px solid #adff2f;
+}
+
+.input-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.submit-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: #adff2f;
+    transform: scale(1.02);
+}
+
+.deskripsi-portofolio {
+    width: 100%;
+    max-width: 400px;
+}
+
+.deskripsi-portofolio .role {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    white-space: normal;
+}
+
+
+/* Biar rapi saat dibuka di HP */
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        overflow-y: auto;
+        background: #fff;
+    }
+    .sisi_kiri {
+        flex: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    .sisi_kanan {
+        flex: 100%;
+        background: #4a6741;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* Jadi 1 kolom di HP */
+    }
+    .navigasi_bar {
+        background: #4a6741;
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+        top: 40px;
+        right: 60px;
+        position: absolute;
+        z-index: 100;
+    }
+    .foto {
+        width: 200px;
+        height: 280px;
+        margin-right: 0;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .deskripsi-portfolio {
+        max-width: none;
+        padding: 0 20px;
+    }
+}
