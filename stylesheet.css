@@ -1,4 +1,4 @@
-/* RESET: Bersihkan jarak bawaan browser */
+
 
 * {
     margin: 0;
@@ -7,8 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* BACKGROUND 3 GARIS DIAGONAL */
 
 .hero {
     min-height: 100vh;
@@ -74,7 +72,6 @@
 }
 
 
-/* FIX UKURAN NAMA: Pakai clamp biar ukuran otomatis mengecil di layar kecil */
 
 .nama {
     font-size: clamp(32px, 4vw, 65px);
@@ -307,8 +304,6 @@
     padding-right: 15px;
 }
 
-
-/* Scrollbar styling */
 
 .portfolio-container::-webkit-scrollbar {
     width: 6px;
